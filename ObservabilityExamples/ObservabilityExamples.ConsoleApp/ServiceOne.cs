@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -12,13 +13,36 @@ namespace ObservabilityExamples.ConsoleApp
         static HttpClient httpClient = new HttpClient();
        internal async Task<int> MakeRequestToGoogle()
         {
-            using var activity = ActivitySourceProvider.Source.StartActivity();
+            using var activity = ActivitySourceProvider.Source.StartActivity(kind:System.Diagnostics.ActivityKind.Producer,name: "CustomMakeRequestToGoogle");
 
-            var result = await httpClient.GetAsync("https://www.google.com");
+            try
+            {
+                var evenTags = new ActivityTagsCollection();
 
-            var responseContent =  await result.Content.ReadAsStringAsync();
+                activity?.AddEvent(new("google'a istek başladı", tags: evenTags));
 
-            return responseContent.Length;
+                activity?.AddTag("request.schema", "https");
+                activity?.AddTag("request.metho", "get");
+
+
+                var result = await httpClient.GetAsync("https://www.google.com");
+                var responseContent = await result.Content.ReadAsStringAsync();
+
+                evenTags.Add("google body length", responseContent.Length);
+                activity?.AddEvent(new("google'a istek tamamlandı", tags: evenTags));
+
+                var serviceTwo = new ServiceTwo();
+                var fileLength = serviceTwo.WriteToFile("Merhaba Dünya");
+
+                return responseContent.Length;
+
+            }
+            catch (Exception ex)
+            {
+                activity.SetStatus(ActivityStatusCode.Error, ex.Message);
+                return -1;
+            }
+
         }
     }
 }
