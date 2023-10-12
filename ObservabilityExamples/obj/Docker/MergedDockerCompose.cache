@@ -1,0 +1,12 @@
+name: dockercompose6159366144742815112
+services:
+  observabilityexamples.consoleapp:
+    build:
+      context: C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityExamples
+      dockerfile: ObservabilityExamples.ConsoleApp/Dockerfile
+    image: observabilityexamplesconsoleapp
+    networks:
+      default: null
+networks:
+  default:
+    name: dockercompose6159366144742815112_default

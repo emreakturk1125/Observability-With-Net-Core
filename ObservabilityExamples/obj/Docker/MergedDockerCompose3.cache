@@ -1,0 +1,70 @@
+name: dockercompose6159366144742815112
+services:
+  jaeger:
+    container_name: jaeger-container
+    image: jaegertracing/all-in-one:1.49
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 4317
+      published: "4317"
+      protocol: tcp
+    - mode: ingress
+      target: 4318
+      published: "4318"
+      protocol: tcp
+    - mode: ingress
+      target: 16686
+      published: "16686"
+      protocol: tcp
+  observabilityexamples.consoleapp:
+    build:
+      context: C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityExamples
+      dockerfile: Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: ObservabilityExamples.ConsoleApp
+      target: base
+    container_name: ObservabilityExamples.ConsoleApp
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      NUGET_FALLBACK_PACKAGES: ""
+    image: observabilityexamplesconsoleapp:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/ObservabilityExamples.ConsoleApp.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    tty: true
+    volumes:
+    - type: bind
+      source: C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityExamples\ObservabilityExamples.ConsoleApp
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityExamples
+      target: /src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\emre.akturk\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\emre.akturk\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  default:
+    name: dockercompose6159366144742815112_default

@@ -1,0 +1,23 @@
+name: dockercompose6159366144742815112
+services:
+  jaeger:
+    container_name: jaeger-container
+    image: jaegertracing/all-in-one:1.49
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 4317
+      published: "4317"
+      protocol: tcp
+    - mode: ingress
+      target: 4318
+      published: "4318"
+      protocol: tcp
+    - mode: ingress
+      target: 16686
+      published: "16686"
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose6159366144742815112_default

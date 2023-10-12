@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iMQ8eG60fJ8wHofWOnaLpbAa8JTpOyHBrefsckpSizQKFKzRCumcxexm5M+HJWYPamS9f8CDOohIo0jcf1mY4w==",
+  "dgSpecHash": "NrjElxZQfD41FZ8ZNPe4IHe6SzJ1lwbqIrHHgHvK1x4K6VBNQN7Rc86yksGaYJm5rn9hO8y6xnz/Fzfz6rrCww==",
   "success": true,
   "projectFilePath": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\ObservabilityExamples\\ObservabilityExamples.ConsoleApp\\ObservabilityExamples.ConsoleApp.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\emre.akturk\\.nuget\\packages\\microsoft.extensions.options\\3.1.0\\microsoft.extensions.options.3.1.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.1.0\\microsoft.extensions.options.configurationextensions.3.1.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
+    "C:\\Users\\emre.akturk\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry\\1.6.0\\opentelemetry.1.6.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.api\\1.6.0\\opentelemetry.api.1.6.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.api.providerbuilderextensions\\1.6.0\\opentelemetry.api.providerbuilderextensions.1.6.0.nupkg.sha512",
