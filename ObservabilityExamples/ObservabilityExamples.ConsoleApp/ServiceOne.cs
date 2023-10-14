@@ -32,7 +32,7 @@ namespace ObservabilityExamples.ConsoleApp
                 activity?.AddEvent(new("google'a istek tamamlandı", tags: evenTags));
 
                 var serviceTwo = new ServiceTwo();
-                var fileLength = serviceTwo.WriteToFile("Merhaba Dünya");
+                var fileLength = await serviceTwo.WriteToFile("Merhaba Dünya");
 
                 return responseContent.Length;
 

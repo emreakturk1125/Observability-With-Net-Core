@@ -32,3 +32,8 @@ C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityE
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityExamples\ObservabilityExamples.ConsoleApp\obj\Debug\net5.0\ObservabilityExamples.ConsoleApp.pdb
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityExamples\ObservabilityExamples.ConsoleApp\obj\Debug\net5.0\ObservabilityExamples.ConsoleApp.genruntimeconfig.cache
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityExamples\ObservabilityExamples.ConsoleApp\obj\Debug\net5.0\ref\ObservabilityExamples.ConsoleApp.dll
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityExamples\ObservabilityExamples.ConsoleApp\bin\Debug\net5.0\Google.Protobuf.dll
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityExamples\ObservabilityExamples.ConsoleApp\bin\Debug\net5.0\Grpc.Core.Api.dll
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityExamples\ObservabilityExamples.ConsoleApp\bin\Debug\net5.0\Grpc.Net.Client.dll
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityExamples\ObservabilityExamples.ConsoleApp\bin\Debug\net5.0\Grpc.Net.Common.dll
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityExamples\ObservabilityExamples.ConsoleApp\bin\Debug\net5.0\OpenTelemetry.Exporter.OpenTelemetryProtocol.dll

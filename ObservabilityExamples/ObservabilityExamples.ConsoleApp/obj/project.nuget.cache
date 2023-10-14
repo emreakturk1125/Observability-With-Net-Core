@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "NrjElxZQfD41FZ8ZNPe4IHe6SzJ1lwbqIrHHgHvK1x4K6VBNQN7Rc86yksGaYJm5rn9hO8y6xnz/Fzfz6rrCww==",
+  "dgSpecHash": "YrqDZFdT5BSGPJUVk7PC4Sz0nK7OHaFul76Sk+X5oukV2awvGp+jRlCANIeenFAlPOgCxpMlA3z6x6TA4az0jQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\ObservabilityExamples\\ObservabilityExamples.ConsoleApp\\ObservabilityExamples.ConsoleApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\emre.akturk\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
+    "C:\\Users\\emre.akturk\\.nuget\\packages\\grpc.core.api\\2.52.0\\grpc.core.api.2.52.0.nupkg.sha512",
+    "C:\\Users\\emre.akturk\\.nuget\\packages\\grpc.net.client\\2.52.0\\grpc.net.client.2.52.0.nupkg.sha512",
+    "C:\\Users\\emre.akturk\\.nuget\\packages\\grpc.net.common\\2.52.0\\grpc.net.common.2.52.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.0\\microsoft.extensions.configuration.3.1.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.0\\microsoft.extensions.configuration.abstractions.3.1.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.0\\microsoft.extensions.configuration.binder.3.1.0.nupkg.sha512",
@@ -20,8 +24,10 @@
     "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.api\\1.6.0\\opentelemetry.api.1.6.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.api.providerbuilderextensions\\1.6.0\\opentelemetry.api.providerbuilderextensions.1.6.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.exporter.console\\1.6.0\\opentelemetry.exporter.console.1.6.0.nupkg.sha512",
+    "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.exporter.opentelemetryprotocol\\1.6.0\\opentelemetry.exporter.opentelemetryprotocol.1.6.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\system.diagnostics.diagnosticsource\\7.0.2\\system.diagnostics.diagnosticsource.7.0.2.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\emre.akturk\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
