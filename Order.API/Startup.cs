@@ -44,7 +44,18 @@ namespace Order.API
                 {
                     resource.AddService(OpenTelemetryConstants.ServiceName, serviceVersion: OpenTelemetryConstants.ServiceVersion);
                 });
-                options.AddAspNetCoreInstrumentation();
+                options.AddAspNetCoreInstrumentation(aspnetcoreOptions =>
+                {
+                    aspnetcoreOptions.Filter = (context) =>
+                    {
+                        if (!string.IsNullOrEmpty(context.Request.Path.Value))
+                        {
+                            return context.Request.Path.Value.Contains("api", StringComparison.InvariantCulture);
+                        }
+                        return false;    
+                    };
+                    aspnetcoreOptions.RecordException = true;
+                });
                 options.AddConsoleExporter();
                 options.AddOtlpExporter();  
             });
