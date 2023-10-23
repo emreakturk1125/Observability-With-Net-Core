@@ -1,3 +1,10 @@
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.csproj.AssemblyReference.cache
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.AssemblyInfoInputs.cache
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.AssemblyInfo.cs
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.csproj.CoreCompileInputs.cache
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\appsettings.json
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\Order.API.exe
@@ -10,6 +17,7 @@ C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\Grpc.Core.Api.dll
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\Grpc.Net.Client.dll
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\Grpc.Net.Common.dll
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\MathNet.Numerics.dll
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\OpenTelemetry.dll
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\OpenTelemetry.Api.dll
@@ -23,13 +31,8 @@ C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.csproj.AssemblyReference.cache
-C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.AssemblyInfoInputs.cache
-C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.AssemblyInfo.cs
-C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.csproj.CoreCompileInputs.cache
-C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\OpenTelemetry.Shared.dll
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\bin\Debug\net5.0\OpenTelemetry.Shared.pdb
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\scopedcss\bundle\Order.API.styles.css
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\staticwebassets\Order.API.StaticWebAssets.Manifest.cache
 C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Order.API\obj\Debug\net5.0\Order.API.RazorTargetAssemblyInfo.cache

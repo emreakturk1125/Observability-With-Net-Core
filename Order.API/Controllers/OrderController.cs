@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Order.API.OrderServices;
+using System.Threading.Tasks;
 
 namespace Order.API.Controllers
 {
@@ -7,6 +9,12 @@ namespace Order.API.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
+        private readonly OrderService _orderService;
+
+        public OrderController(OrderService orderService)
+        {
+            _orderService = orderService;
+        }
 
         /// <summary>
         /// Exception örneği
@@ -21,12 +29,10 @@ namespace Order.API.Controllers
             return Ok();
         }
 
-        [HttpGet]
-        public IActionResult Create1()
-        {
-            var a = 10;
-            var b = 0;
-            var c = a / b;
+        [HttpPost]
+        public async Task<IActionResult> Create1(OrderCreateRequestDto request)
+        { 
+           await _orderService.CreateAsync(request);
             return Ok();
         }
     }

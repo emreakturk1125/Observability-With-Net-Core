@@ -1,0 +1,1 @@
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\ObservabilityExamples\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache

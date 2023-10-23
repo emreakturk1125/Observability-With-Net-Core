@@ -612,6 +612,22 @@
             "related": ".xml"
           }
         }
+      },
+      "OpenTelemetry.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "OpenTelemetry.Exporter.Console": "1.6.0",
+          "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.6.0",
+          "OpenTelemetry.Extensions.Hosting": "1.6.0",
+          "OpenTelemetry.Instrumentation.AspNetCore": "1.5.1-beta.1"
+        },
+        "compile": {
+          "bin/placeholder/OpenTelemetry.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OpenTelemetry.Shared.dll": {}
+        }
       }
     }
   },
@@ -1386,15 +1402,17 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "OpenTelemetry.Shared/1.0.0": {
+      "type": "project",
+      "path": "../OpenTelemetry.Shared/OpenTelemetry.Shared.csproj",
+      "msbuildProject": "../OpenTelemetry.Shared/OpenTelemetry.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "MathNet.Numerics >= 5.0.0",
-      "OpenTelemetry.Exporter.Console >= 1.6.0",
-      "OpenTelemetry.Exporter.OpenTelemetryProtocol >= 1.6.0",
-      "OpenTelemetry.Extensions.Hosting >= 1.6.0",
-      "OpenTelemetry.Instrumentation.AspNetCore >= 1.5.1-beta.1",
+      "OpenTelemetry.Shared >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -1424,7 +1442,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\OpenTelemetry.Shared\\OpenTelemetry.Shared.csproj": {
+              "projectPath": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\OpenTelemetry.Shared\\OpenTelemetry.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1440,22 +1462,6 @@
           "MathNet.Numerics": {
             "target": "Package",
             "version": "[5.0.0, )"
-          },
-          "OpenTelemetry.Exporter.Console": {
-            "target": "Package",
-            "version": "[1.6.0, )"
-          },
-          "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
-            "target": "Package",
-            "version": "[1.6.0, )"
-          },
-          "OpenTelemetry.Extensions.Hosting": {
-            "target": "Package",
-            "version": "[1.6.0, )"
-          },
-          "OpenTelemetry.Instrumentation.AspNetCore": {
-            "target": "Package",
-            "version": "[1.5.1-beta.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

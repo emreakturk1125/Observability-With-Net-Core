@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Order.API.OrderServices
 {
@@ -28,7 +29,7 @@ namespace Order.API.OrderServices
         public int ProductId { get; set; }
         public int Count { get; set; }
 
-        [Precision(18,2)]
+        //[Precision(18,2)]
         public decimal UnitPrice { get; set; }
         
         public int OrderId { get; set; }

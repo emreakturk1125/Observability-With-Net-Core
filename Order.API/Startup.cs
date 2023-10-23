@@ -1,19 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using OpenTelemetry.Resources;
-using OpenTelemetry.Trace;
-using Order.API.OpenTelemetry;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using OpenTelemetry.Shared;
+using Order.API.OrderServices;
 
 namespace Order.API
 {
@@ -34,33 +26,9 @@ namespace Order.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Order.API", Version = "v1" });
             });
 
-            services.Configure<OpenTelemetryConstants>(Configuration.GetSection("OpenTelemetry"));
-
-            var openTelemtry = Configuration.GetSection("OpenTelemetry").Get<OpenTelemetryConstants>();
-             
-            services.AddOpenTelemetry().WithTracing(options =>
-            {
-                options.AddSource(OpenTelemetryConstants.ActivitySourceName).ConfigureResource(resource =>
-                {
-                    resource.AddService(OpenTelemetryConstants.ServiceName, serviceVersion: OpenTelemetryConstants.ServiceVersion);
-                });
-                options.AddAspNetCoreInstrumentation(aspnetcoreOptions =>
-                {
-                    aspnetcoreOptions.Filter = (context) =>
-                    {
-                        if (!string.IsNullOrEmpty(context.Request.Path.Value))
-                        {
-                            return context.Request.Path.Value.Contains("api", StringComparison.InvariantCulture);
-                        }
-                        return false;    
-                    };
-                    aspnetcoreOptions.RecordException = true;
-                });
-                options.AddConsoleExporter();
-                options.AddOtlpExporter();  
-            });
-
-            ActivitySourceProvider.Source = new System.Diagnostics.ActivitySource(OpenTelemetryConstants.ActivitySourceName);
+            services.AddScoped<OrderService>();
+            services.AddOpenTelemetryExt(Configuration);
+                  
         }
          
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

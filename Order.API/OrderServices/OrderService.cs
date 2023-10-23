@@ -1,10 +1,7 @@
 ﻿
-  
-using Order.API.Models;
-using Order.API.OpenTelemetry; 
-using System;
+using OpenTelemetry.Shared;
 using System.Diagnostics;
-using System.Net;
+using System.Threading.Tasks;
 
 namespace Order.API.OrderServices
 {
@@ -24,66 +21,78 @@ namespace Order.API.OrderServices
         //    _logger = logger;
         //}
 
-        //public async Task<ResponseDto<OrderCreateResponseDto>> CreateAsync(OrderCreateRequestDto request)
-        //{
+        public Task CreateAsync(OrderCreateRequestDto request)
+        {
+            Activity.Current?.SetTag("Asp.Net Core(instrumentation) Tag1", "Asp.Net Core(instrumentation) Tag1 Value");
+
+            using (var redisActivity = ActivitySourceProvider.Source.StartActivity("RedisStringSetGet"))
+            {
+                redisActivity?.AddEvent(new("Sipariş süreci başladı"));
+
+                //db işlemleri
+
+                redisActivity.SetTag("order user Id", request.UserId);
+
+                redisActivity?.AddEvent(new("Sipariş süreci tamamlandı"));
+            }
+
+            return Task.CompletedTask;
 
 
-        //    using (var redisActivity = ActivitySourceProvider.Source.StartActivity("RedisStringSetGet"))
-        //    {
-        //        // redis için örnek kod
-        //        await _redisService.GetDb(0).StringSetAsync("userId", request.UserId);
+            //using (var redisActivity = ActivitySourceProvider.Source.StartActivity("RedisStringSetGet"))
+            //{
+            //    // redis için örnek kod
+            //    await _redisService.GetDb(0).StringSetAsync("userId", request.UserId);
 
-        //        redisActivity.SetTag("userId", request.UserId);
+            //    redisActivity.SetTag("userId", request.UserId);
 
-        //        var redisUserId = _redisService.GetDb(0).StringGetAsync("UserId");
-        //    }
-         
+            //    var redisUserId = _redisService.GetDb(0).StringGetAsync("UserId");
+            //}
 
+            //    Activity.Current?.SetTag("Asp.Net Core(instrumentation) tag1", "Asp.Net Core(instrumentation) tag value");
+            //    using var activity = ActivitySourceProvider.Source.StartActivity();
+            //    activity?.AddEvent(new("Sipariş süreci başladı."));
 
-        //    Activity.Current?.SetTag("Asp.Net Core(instrumentation) tag1", "Asp.Net Core(instrumentation) tag value");
-        //    using var activity = ActivitySourceProvider.Source.StartActivity();
-        //    activity?.AddEvent(new("Sipariş süreci başladı."));
-
-        //    activity.SetBaggage("userId", request.UserId.ToString());
-        //    var newOrder = new Order()
-        //    {
-        //        Created = DateTime.Now,
-        //        OrderCode = Guid.NewGuid().ToString(),
-        //        Status = OrderStatus.Success,
-        //        UserId = request.UserId,
-        //        Items = request.Items.Select(x => new OrderItem()
-        //        {
-        //            Count = x.Count,
-        //            ProductId = x.ProductId,
-        //            UnitPrice = x.UnitPrice
-        //        }).ToList()
+            //    activity.SetBaggage("userId", request.UserId.ToString());
+            //    var newOrder = new Order()
+            //    {
+            //        Created = DateTime.Now,
+            //        OrderCode = Guid.NewGuid().ToString(),
+            //        Status = OrderStatus.Success,
+            //        UserId = request.UserId,
+            //        Items = request.Items.Select(x => new OrderItem()
+            //        {
+            //            Count = x.Count,
+            //            ProductId = x.ProductId,
+            //            UnitPrice = x.UnitPrice
+            //        }).ToList()
 
 
-        //    };
+            //    };
 
-        //    _context.Orders.Add(newOrder);
-        //    await _context.SaveChangesAsync();
-        //    _logger.LogInformation("Sipariş veritabanına kaydedildi.{@userId}",request.UserId);
-        
-
-        //    StockCheckAndPaymentProcessRequestDto stockRequest = new();
-
-        //    stockRequest.OrderCode = newOrder.OrderCode;
-        //    stockRequest.OrderItems = request.Items;
-
-        //    var (isSuccess, failMessage) = await _stockService.CheckStockAndPaymentStartAsync(stockRequest);
+            //    _context.Orders.Add(newOrder);
+            //    await _context.SaveChangesAsync();
+            //    _logger.LogInformation("Sipariş veritabanına kaydedildi.{@userId}",request.UserId);
 
 
-        //    if(!isSuccess)
-        //    {
-        //        return ResponseDto<OrderCreateResponseDto>.Fail(HttpStatusCode.InternalServerError.GetHashCode(), failMessage!);
+            //    StockCheckAndPaymentProcessRequestDto stockRequest = new();
 
-        //    }
-           
-        //    activity?.AddEvent(new("Sipariş süreci tamamlandı."));
+            //    stockRequest.OrderCode = newOrder.OrderCode;
+            //    stockRequest.OrderItems = request.Items;
 
-        //    return  ResponseDto<OrderCreateResponseDto>.Success(HttpStatusCode.OK.GetHashCode(), new OrderCreateResponseDto() { Id = newOrder.Id });
-         
-        //}
+            //    var (isSuccess, failMessage) = await _stockService.CheckStockAndPaymentStartAsync(stockRequest);
+
+
+            //    if(!isSuccess)
+            //    {
+            //        return ResponseDto<OrderCreateResponseDto>.Fail(HttpStatusCode.InternalServerError.GetHashCode(), failMessage!);
+
+            //    }
+
+            //    activity?.AddEvent(new("Sipariş süreci tamamlandı."));
+
+            //    return  ResponseDto<OrderCreateResponseDto>.Success(HttpStatusCode.OK.GetHashCode(), new OrderCreateResponseDto() { Id = newOrder.Id });
+
+        }
     }
 }

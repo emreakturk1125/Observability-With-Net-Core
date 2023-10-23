@@ -4,14 +4,14 @@
     "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\Order.API\\Order.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\Order.API\\Order.API.csproj": {
+    "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\OpenTelemetry.Shared\\OpenTelemetry.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\Order.API\\Order.API.csproj",
-        "projectName": "Order.API",
-        "projectPath": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\Order.API\\Order.API.csproj",
+        "projectUniqueName": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\OpenTelemetry.Shared\\OpenTelemetry.Shared.csproj",
+        "projectName": "OpenTelemetry.Shared",
+        "projectPath": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\OpenTelemetry.Shared\\OpenTelemetry.Shared.csproj",
         "packagesPath": "C:\\Users\\emre.akturk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\Order.API\\obj\\",
+        "outputPath": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\OpenTelemetry.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\emre.akturk\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,10 +40,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "MathNet.Numerics": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
             "OpenTelemetry.Exporter.Console": {
               "target": "Package",
               "version": "[1.6.0, )"
@@ -59,6 +55,71 @@
             "OpenTelemetry.Instrumentation.AspNetCore": {
               "target": "Package",
               "version": "[1.5.1-beta.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\Order.API\\Order.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\Order.API\\Order.API.csproj",
+        "projectName": "Order.API",
+        "projectPath": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\Order.API\\Order.API.csproj",
+        "packagesPath": "C:\\Users\\emre.akturk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\Order.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\emre.akturk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\OpenTelemetry.Shared\\OpenTelemetry.Shared.csproj": {
+                "projectPath": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\OpenTelemetry.Shared\\OpenTelemetry.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
