@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Order.API.OrderServices;
+using System;
 using System.Threading.Tasks;
 
 namespace Order.API.Controllers
@@ -31,9 +32,8 @@ namespace Order.API.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Create1(OrderCreateRequestDto request)
-        { 
-           await _orderService.CreateAsync(request);
-            return Ok();
+        {  
+            return Ok(await _orderService.CreateAsync(request)); 
         }
     }
 }

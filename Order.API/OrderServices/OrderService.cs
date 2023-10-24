@@ -1,27 +1,26 @@
 ﻿
 using OpenTelemetry.Shared;
+using Order.API.Models;
+using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Order.API.OrderServices
 {
     public class OrderService
     {
-        //private readonly AppDbContext _context;
+        private readonly AppDbContext _context;
         //private readonly StockService _stockService;
         //private readonly RedisService _redisService;
         //private readonly IPublishEndpoint _publishEndpoint;
         //private readonly ILogger<OrderService> _logger;
-        //public OrderService(AppDbContext context, StockService stockService, RedisService redisService, IPublishEndpoint publishEndpoint, ILogger<OrderService> logger)
-        //{
-        //    _context = context;
-        //    _stockService = stockService;
-        //    _redisService = redisService;
-        //    _publishEndpoint = publishEndpoint;
-        //    _logger = logger;
-        //}
+        public OrderService(AppDbContext context)
+        {
+            _context = context;
+        }
 
-        public Task CreateAsync(OrderCreateRequestDto request)
+        public async Task<OrderCreateResponseDto> CreateAsync(OrderCreateRequestDto request)
         {
             Activity.Current?.SetTag("Asp.Net Core(instrumentation) Tag1", "Asp.Net Core(instrumentation) Tag1 Value");
 
@@ -29,14 +28,31 @@ namespace Order.API.OrderServices
             {
                 redisActivity?.AddEvent(new("Sipariş süreci başladı"));
 
-                //db işlemleri
+                var newOrder = new Order()
+                {
+                    Created = DateTime.Now,
+                    OrderCode = Guid.NewGuid().ToString(),
+                    Status = OrderStatus.Success,
+                    UserId = request.UserId,
+                    Items = request.Items.Select(x => new OrderItem()
+                    {
+                        Count = x.Count,
+                        ProductId = x.ProductId,
+                        UnitPrice = x.UnitPrice
+                    }).ToList()
+                };
+
+                _context.Orders.Add(newOrder);
+                await _context.SaveChangesAsync();
 
                 redisActivity.SetTag("order user Id", request.UserId);
 
                 redisActivity?.AddEvent(new("Sipariş süreci tamamlandı"));
+
+                return new OrderCreateResponseDto() { Id = newOrder.Id };
+
             }
 
-            return Task.CompletedTask;
 
 
             //using (var redisActivity = ActivitySourceProvider.Source.StartActivity("RedisStringSetGet"))
@@ -54,24 +70,12 @@ namespace Order.API.OrderServices
             //    activity?.AddEvent(new("Sipariş süreci başladı."));
 
             //    activity.SetBaggage("userId", request.UserId.ToString());
-            //    var newOrder = new Order()
-            //    {
-            //        Created = DateTime.Now,
-            //        OrderCode = Guid.NewGuid().ToString(),
-            //        Status = OrderStatus.Success,
-            //        UserId = request.UserId,
-            //        Items = request.Items.Select(x => new OrderItem()
-            //        {
-            //            Count = x.Count,
-            //            ProductId = x.ProductId,
-            //            UnitPrice = x.UnitPrice
-            //        }).ToList()
+
 
 
             //    };
 
-            //    _context.Orders.Add(newOrder);
-            //    await _context.SaveChangesAsync();
+
             //    _logger.LogInformation("Sipariş veritabanına kaydedildi.{@userId}",request.UserId);
 
 

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0FQCDq8/5o+mHR7Q0o0LIWUHVyGJpMm2qecdxYuOwLL+MFrNcsZX+Gcc88Wu1jXScXFiHwX+fmb7ymFoYnordw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\Common.Shared\\Common.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\emre.akturk\\.nuget\\packages\\microsoft.io.recyclablememorystream\\2.3.2\\microsoft.io.recyclablememorystream.2.3.2.nupkg.sha512"
+  ],
+  "logs": []
+}

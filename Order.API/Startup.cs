@@ -1,10 +1,13 @@
+using Common.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using OpenTelemetry.Shared;
+using Order.API.Models;
 using Order.API.OrderServices;
 
 namespace Order.API
@@ -27,6 +30,13 @@ namespace Order.API
             });
 
             services.AddScoped<OrderService>();
+
+
+            services.AddDbContext<AppDbContext>(options => 
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("SqlServer"));
+            });
+
             services.AddOpenTelemetryExt(Configuration);
                   
         }
@@ -41,6 +51,8 @@ namespace Order.API
             }
 
             app.UseHttpsRedirection();
+
+            app.UseMiddleware<RequestAndResponseTelemetryMiddleware>();
 
             app.UseRouting();
 

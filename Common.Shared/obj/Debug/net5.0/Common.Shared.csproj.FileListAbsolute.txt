@@ -1,0 +1,12 @@
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Common.Shared\bin\Debug\net5.0\Common.Shared.deps.json
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Common.Shared\bin\Debug\net5.0\Common.Shared.dll
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Common.Shared\bin\Debug\net5.0\Common.Shared.pdb
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Common.Shared\obj\Debug\net5.0\Common.Shared.csproj.AssemblyReference.cache
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Common.Shared\obj\Debug\net5.0\Common.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Common.Shared\obj\Debug\net5.0\Common.Shared.AssemblyInfoInputs.cache
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Common.Shared\obj\Debug\net5.0\Common.Shared.AssemblyInfo.cs
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Common.Shared\obj\Debug\net5.0\Common.Shared.csproj.CoreCompileInputs.cache
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Common.Shared\obj\Debug\net5.0\Common.Shared.dll
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Common.Shared\obj\Debug\net5.0\refint\Common.Shared.dll
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Common.Shared\obj\Debug\net5.0\Common.Shared.pdb
+C:\Users\emre.akturk\Documents\GitHub\Observability-With-Net-Core\Common.Shared\obj\Debug\net5.0\ref\Common.Shared.dll
