@@ -32,8 +32,10 @@ namespace Order.API.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Create1(OrderCreateRequestDto request)
-        {  
-            return Ok(await _orderService.CreateAsync(request)); 
+        {
+            var result = await _orderService.CreateAsync(request);
+
+            return new ObjectResult(result) { StatusCode = result.StatusCode }; 
         }
     }
 }

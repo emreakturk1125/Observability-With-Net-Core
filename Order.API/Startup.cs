@@ -9,6 +9,7 @@ using Microsoft.OpenApi.Models;
 using OpenTelemetry.Shared;
 using Order.API.Models;
 using Order.API.OrderServices;
+using Order.API.StockServices;
 
 namespace Order.API
 {
@@ -30,7 +31,12 @@ namespace Order.API
             });
 
             services.AddScoped<OrderService>();
+            services.AddScoped<StockService>();
 
+            services.AddHttpClient<StockService>(options =>
+            {
+                options.BaseAddress = new System.Uri(Configuration.GetSection("ApiServices")["StockApi"]);
+            });
 
             services.AddDbContext<AppDbContext>(options => 
             {
