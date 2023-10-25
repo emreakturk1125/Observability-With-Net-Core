@@ -24,7 +24,7 @@ namespace Order.API.OrderServices
         {
             Activity.Current?.SetTag("Asp.Net Core(instrumentation) Tag1", "Asp.Net Core(instrumentation) Tag1 Value");
 
-            using (var redisActivity = ActivitySourceProvider.Source.StartActivity("RedisStringSetGet"))
+            using (var redisActivity = ActivitySourceProvider.Source.StartActivity("CreateAsync"))
             {
                 redisActivity?.AddEvent(new("Sipariş süreci başladı"));
 

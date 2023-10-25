@@ -34,6 +34,11 @@ namespace OpenTelemetry.Shared
                     };
                     aspnetcoreOptions.RecordException = true;
                 });
+                options.AddEntityFrameworkCoreInstrumentation(efCoreOptions =>
+                {
+                    efCoreOptions.SetDbStatementForText = true;
+                    efCoreOptions.SetDbStatementForStoredProcedure = true;
+                });
                 options.AddConsoleExporter();
                 options.AddOtlpExporter();
             });

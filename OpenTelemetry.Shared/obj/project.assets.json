@@ -430,6 +430,23 @@
           }
         }
       },
+      "OpenTelemetry.Instrumentation.EntityFrameworkCore/1.0.0-beta.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Options": "3.1.0",
+          "OpenTelemetry.Api.ProviderBuilderExtensions": "[1.5.0, 2.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenTelemetry.Instrumentation.EntityFrameworkCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenTelemetry.Instrumentation.EntityFrameworkCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Diagnostics.DiagnosticSource/7.0.2": {
         "type": "package",
         "dependencies": {
@@ -976,6 +993,20 @@
         "opentelemetry.instrumentation.aspnetcore.nuspec"
       ]
     },
+    "OpenTelemetry.Instrumentation.EntityFrameworkCore/1.0.0-beta.7": {
+      "sha512": "AzQ+tvVX/1md8GtwcP5CyNrMuCiR8Q7ULWIoX9qyJXwub+4tGfY2gRp5DFdCddGmvq3uCLsDbmUx40kxJwYgsg==",
+      "type": "package",
+      "path": "opentelemetry.instrumentation.entityframeworkcore/1.0.0-beta.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/OpenTelemetry.Instrumentation.EntityFrameworkCore.dll",
+        "lib/netstandard2.0/OpenTelemetry.Instrumentation.EntityFrameworkCore.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.instrumentation.entityframeworkcore.1.0.0-beta.7.nupkg.sha512",
+        "opentelemetry.instrumentation.entityframeworkcore.nuspec"
+      ]
+    },
     "System.Diagnostics.DiagnosticSource/7.0.2": {
       "sha512": "hYr3I9N9811e0Bjf2WNwAGGyTuAFbbTgX1RPLt/3Wbm68x3IGcX5Cl75CMmgT6WlNwLQ2tCCWfqYPpypjaf2xA==",
       "type": "package",
@@ -1161,7 +1192,8 @@
       "OpenTelemetry.Exporter.Console >= 1.6.0",
       "OpenTelemetry.Exporter.OpenTelemetryProtocol >= 1.6.0",
       "OpenTelemetry.Extensions.Hosting >= 1.6.0",
-      "OpenTelemetry.Instrumentation.AspNetCore >= 1.5.1-beta.1"
+      "OpenTelemetry.Instrumentation.AspNetCore >= 1.5.1-beta.1",
+      "OpenTelemetry.Instrumentation.EntityFrameworkCore >= 1.0.0-beta.7"
     ]
   },
   "packageFolders": {
@@ -1218,6 +1250,10 @@
           "OpenTelemetry.Instrumentation.AspNetCore": {
             "target": "Package",
             "version": "[1.5.1-beta.1, )"
+          },
+          "OpenTelemetry.Instrumentation.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[1.0.0-beta.7, )"
           }
         },
         "imports": [

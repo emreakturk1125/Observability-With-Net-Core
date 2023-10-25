@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MVfCuofwdJ3DDrdfNrLVVLS9zCPtre6dte29EFwKpb7ZV7psJ15OQR3ftME6qYcaeCfr1CoSUAdgY09V/HSQ3g==",
+  "dgSpecHash": "mUNCLJCLa3alq47kfOyLngbDKoN7t96+qnH98Fc1exbZ/cV9NYafxaTmb7zbw60vOrBDBb3/OwGXf81yCnnIZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\Order.API\\Order.API.csproj",
   "expectedPackageFiles": [
@@ -58,6 +58,7 @@
     "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.exporter.opentelemetryprotocol\\1.6.0\\opentelemetry.exporter.opentelemetryprotocol.1.6.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.extensions.hosting\\1.6.0\\opentelemetry.extensions.hosting.1.6.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.instrumentation.aspnetcore\\1.5.1-beta.1\\opentelemetry.instrumentation.aspnetcore.1.5.1-beta.1.nupkg.sha512",
+    "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.instrumentation.entityframeworkcore\\1.0.0-beta.7\\opentelemetry.instrumentation.entityframeworkcore.1.0.0-beta.7.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",

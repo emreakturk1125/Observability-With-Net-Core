@@ -119,6 +119,10 @@
             "OpenTelemetry.Instrumentation.AspNetCore": {
               "target": "Package",
               "version": "[1.5.1-beta.1, )"
+            },
+            "OpenTelemetry.Instrumentation.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[1.0.0-beta.7, )"
             }
           },
           "imports": [

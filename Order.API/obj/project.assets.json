@@ -937,6 +937,23 @@
           }
         }
       },
+      "OpenTelemetry.Instrumentation.EntityFrameworkCore/1.0.0-beta.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Options": "3.1.0",
+          "OpenTelemetry.Api.ProviderBuilderExtensions": "[1.5.0, 2.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenTelemetry.Instrumentation.EntityFrameworkCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenTelemetry.Instrumentation.EntityFrameworkCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.native.System/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2274,7 +2291,8 @@
           "OpenTelemetry.Exporter.Console": "1.6.0",
           "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.6.0",
           "OpenTelemetry.Extensions.Hosting": "1.6.0",
-          "OpenTelemetry.Instrumentation.AspNetCore": "1.5.1-beta.1"
+          "OpenTelemetry.Instrumentation.AspNetCore": "1.5.1-beta.1",
+          "OpenTelemetry.Instrumentation.EntityFrameworkCore": "1.0.0-beta.7"
         },
         "compile": {
           "bin/placeholder/OpenTelemetry.Shared.dll": {}
@@ -3468,6 +3486,20 @@
         "opentelemetry-icon-color.png",
         "opentelemetry.instrumentation.aspnetcore.1.5.1-beta.1.nupkg.sha512",
         "opentelemetry.instrumentation.aspnetcore.nuspec"
+      ]
+    },
+    "OpenTelemetry.Instrumentation.EntityFrameworkCore/1.0.0-beta.7": {
+      "sha512": "AzQ+tvVX/1md8GtwcP5CyNrMuCiR8Q7ULWIoX9qyJXwub+4tGfY2gRp5DFdCddGmvq3uCLsDbmUx40kxJwYgsg==",
+      "type": "package",
+      "path": "opentelemetry.instrumentation.entityframeworkcore/1.0.0-beta.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/OpenTelemetry.Instrumentation.EntityFrameworkCore.dll",
+        "lib/netstandard2.0/OpenTelemetry.Instrumentation.EntityFrameworkCore.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.instrumentation.entityframeworkcore.1.0.0-beta.7.nupkg.sha512",
+        "opentelemetry.instrumentation.entityframeworkcore.nuspec"
       ]
     },
     "runtime.native.System/4.3.0": {

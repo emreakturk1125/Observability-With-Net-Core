@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Common.Shared.DTOs;
+using System.Collections.Generic;
 
 namespace Order.API.OrderServices
 {
@@ -8,10 +9,5 @@ namespace Order.API.OrderServices
         public List<OrderItemDto> Items { get; set; } = null!;
     }
 
-    public record OrderItemDto
-    {
-        public int ProductId { get; set; }
-        public int Count { get; set; }
-        public decimal UnitPrice { get; set; }
-    }
+   
 }
