@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HcjLuNbzEw61BLy7F72s8OOG2rWavOnkCrNwms2774oX8y8YQ4LSw7hzuPzBCjHMYyOoHm2Yw4IwjRhvLn/DiA==",
+  "dgSpecHash": "E9oMDx5/bSoguZSnPm5/HOiBf4qqsIfbQsjFRLvt37X6uEzFHUK5blHFk0aAvjwzkS/GLNrbOC6ZEjZSt96MnA==",
   "success": true,
   "projectFilePath": "C:\\Users\\emre.akturk\\Documents\\GitHub\\Observability-With-Net-Core\\OpenTelemetry.Shared\\OpenTelemetry.Shared.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.extensions.hosting\\1.6.0\\opentelemetry.extensions.hosting.1.6.0.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.instrumentation.aspnetcore\\1.5.1-beta.1\\opentelemetry.instrumentation.aspnetcore.1.5.1-beta.1.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.instrumentation.entityframeworkcore\\1.0.0-beta.7\\opentelemetry.instrumentation.entityframeworkcore.1.0.0-beta.7.nupkg.sha512",
+    "C:\\Users\\emre.akturk\\.nuget\\packages\\opentelemetry.instrumentation.http\\1.5.1-beta.1\\opentelemetry.instrumentation.http.1.5.1-beta.1.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\system.diagnostics.diagnosticsource\\7.0.2\\system.diagnostics.diagnosticsource.7.0.2.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\emre.akturk\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512",

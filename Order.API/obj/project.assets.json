@@ -954,6 +954,22 @@
           }
         }
       },
+      "OpenTelemetry.Instrumentation.Http/1.5.1-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "OpenTelemetry": "1.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenTelemetry.Instrumentation.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenTelemetry.Instrumentation.Http.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.native.System/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2292,7 +2308,8 @@
           "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.6.0",
           "OpenTelemetry.Extensions.Hosting": "1.6.0",
           "OpenTelemetry.Instrumentation.AspNetCore": "1.5.1-beta.1",
-          "OpenTelemetry.Instrumentation.EntityFrameworkCore": "1.0.0-beta.7"
+          "OpenTelemetry.Instrumentation.EntityFrameworkCore": "1.0.0-beta.7",
+          "OpenTelemetry.Instrumentation.Http": "1.5.1-beta.1"
         },
         "compile": {
           "bin/placeholder/OpenTelemetry.Shared.dll": {}
@@ -3500,6 +3517,24 @@
         "opentelemetry-icon-color.png",
         "opentelemetry.instrumentation.entityframeworkcore.1.0.0-beta.7.nupkg.sha512",
         "opentelemetry.instrumentation.entityframeworkcore.nuspec"
+      ]
+    },
+    "OpenTelemetry.Instrumentation.Http/1.5.1-beta.1": {
+      "sha512": "Qyhp8nzfkGVIQdBJbgnJaFDQoH0AcMjkbCP6ddB04eSiWFS1e8FRsRMwnJSOQ3cafWowK3Y4S/V60xdB1rNX5A==",
+      "type": "package",
+      "path": "opentelemetry.instrumentation.http/1.5.1-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/OpenTelemetry.Instrumentation.Http.dll",
+        "lib/net462/OpenTelemetry.Instrumentation.Http.xml",
+        "lib/net6.0/OpenTelemetry.Instrumentation.Http.dll",
+        "lib/net6.0/OpenTelemetry.Instrumentation.Http.xml",
+        "lib/netstandard2.0/OpenTelemetry.Instrumentation.Http.dll",
+        "lib/netstandard2.0/OpenTelemetry.Instrumentation.Http.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.instrumentation.http.1.5.1-beta.1.nupkg.sha512",
+        "opentelemetry.instrumentation.http.nuspec"
       ]
     },
     "runtime.native.System/4.3.0": {

@@ -123,6 +123,10 @@
             "OpenTelemetry.Instrumentation.EntityFrameworkCore": {
               "target": "Package",
               "version": "[1.0.0-beta.7, )"
+            },
+            "OpenTelemetry.Instrumentation.Http": {
+              "target": "Package",
+              "version": "[1.5.1-beta.1, )"
             }
           },
           "imports": [

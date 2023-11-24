@@ -945,6 +945,20 @@
           "lib/netstandard2.0/OpenTelemetry.Instrumentation.EntityFrameworkCore.dll": {}
         }
       },
+      "OpenTelemetry.Instrumentation.Http/1.5.1-beta.1": {
+        "dependencies": {
+          "OpenTelemetry": "1.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenTelemetry.Instrumentation.Http.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.5.1.957"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenTelemetry.Instrumentation.Http.dll": {}
+        }
+      },
       "runtime.native.System/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -1643,7 +1657,8 @@
           "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.6.0",
           "OpenTelemetry.Extensions.Hosting": "1.6.0",
           "OpenTelemetry.Instrumentation.AspNetCore": "1.5.1-beta.1",
-          "OpenTelemetry.Instrumentation.EntityFrameworkCore": "1.0.0-beta.7"
+          "OpenTelemetry.Instrumentation.EntityFrameworkCore": "1.0.0-beta.7",
+          "OpenTelemetry.Instrumentation.Http": "1.5.1-beta.1"
         },
         "runtime": {
           "OpenTelemetry.Shared.dll": {}
@@ -3730,6 +3745,13 @@
       "sha512": "sha512-AzQ+tvVX/1md8GtwcP5CyNrMuCiR8Q7ULWIoX9qyJXwub+4tGfY2gRp5DFdCddGmvq3uCLsDbmUx40kxJwYgsg==",
       "path": "opentelemetry.instrumentation.entityframeworkcore/1.0.0-beta.7",
       "hashPath": "opentelemetry.instrumentation.entityframeworkcore.1.0.0-beta.7.nupkg.sha512"
+    },
+    "OpenTelemetry.Instrumentation.Http/1.5.1-beta.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qyhp8nzfkGVIQdBJbgnJaFDQoH0AcMjkbCP6ddB04eSiWFS1e8FRsRMwnJSOQ3cafWowK3Y4S/V60xdB1rNX5A==",
+      "path": "opentelemetry.instrumentation.http/1.5.1-beta.1",
+      "hashPath": "opentelemetry.instrumentation.http.1.5.1-beta.1.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",
